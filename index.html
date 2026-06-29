@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+<meta charset="UTF-8">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0703CFT4L7"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-0703CFT4L7');
+</script>
+
+<meta
+name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>LEWXZZZ | Client & Cày Thuê</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+.header{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #3b82f6;
+    box-shadow:0 0 20px #3b82f688;
+}
+
+h1{
+    margin-top:15px;
+    font-size:32px;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:#cbd5e1;
+    line-height:1.5;
+}
+
+.notice{
+    margin:20px auto;
+    max-width:700px;
+    background:#1e293b;
+    padding:14px 18px;
+    border-radius:12px;
+    border-left:5px solid #3b82f6;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.social img{
+    width:42px;
+    height:42px;
+    transition:.3s;
+}
+
+.social img:hover{
+    transform:scale(1.15);
+}
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:25px;
+}
+
+.tab{
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.tab.active{
+    background:#2563eb;
+}
+
+.content{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.category{
+    font-size:24px;
+    font-weight:bold;
+    margin:30px 0 15px;
+    color:#60a5fa;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#1e293b;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.app-logo{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    object-fit:cover;
+}
+
+.name{
+    flex:1;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.note{
+    font-size:13px;
+    color:#94a3b8;
+    margin-top:5px;
+}
+
+.download{
+    background:#2563eb;
+    color:white;
+    padding:12px 15px;
+    border-radius:10px;
+    font-size:22px;
+    transition:.3s;
+}
+
+.download:hover{
+    background:#3b82f6;
+}
+
+.box{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.list .item{
+    justify-content:space-between;
+}
+
+.price{
+    color:#22c55e;
+    font-weight:bold;
+}
+.particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particles span{
+    position:absolute;
+    display:block;
+    border-radius:50%;
+    background:rgba(255,255,255,.75);
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px) translateX(0);
+    }
+
+    to{
+        transform:translateY(110vh) translateX(var(--drift));
+    }
+}
+/* Hiệu ứng xuất hiện */
+.header,
+.tabs,
+.category,
+.item,
+.box{
+    animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Hover cho các ô */
+.item,
+.box{
+    transition:.3s;
+}
+
+.item:hover,
+.box:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(59,130,246,.25);
+}
+
+/* Hover cho tab */
+.tab:hover{
+    background:#334155;
+}
+
+/* Hover cho nút tải */
+.download:hover{
+    transform:scale(1.08);
+}
+
+/* Hover cho logo */
+.logo{
+    transition:.3s;
+}
+
+.logo:hover{
+    transform:scale(1.05) rotate(2deg);
+}
+/* Responsive */
+@media (max-width:768px){
+
+    .header{
+        padding:20px 15px;
+    }
+}
+    .logo{
+        width:90px;
+        height:90px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .tabs{
+        flex-direction:column;
+        gap:12px;
+        margin:20px 15px;
+    }
+
+    .tab{
+        width:100%;
+    }
+
+    .content{
+        padding:15px;
+    }
+
+    .item{
+        gap:12px;
+        padding:12px;
+    }
+
+    .app-logo{
+        width:50px;
+        height:50px;
+    }
+
+    .name{
+        font-size:15px;
+    }
+
+    .note{
+        font-size:12px;
+    }
+
+    .download{
+        padding:10px 12px;
+        font-size:20px;
+    }
+
+    .service{
+        max-width:70%;
+        line-height:1.4;
+    }
+
+.footer{
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+    font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Hiệu ứng hạt -->
+<div class="particles" id="particles"></div>
+
+<!-- Header -->
+<div class="header">
+
+    <img
+    class="logo"
+    src="https://i.ibb.co/Fb7NpYMr/Kyouko-Hori-From-Horimiya.jpg">
+
+    <h1>LEWXZZZ</h1>
+
+    <p class="subtitle">
+        Chào mừng đến với Website chính thức của LewxZzZ
+    </p>
+
+    <div class="notice">
+
+        📢 Thông báo:
+        Hiện tại tất cả dịch vụ đều hoạt động bình thường.
+
+    </div>
+
+    <div class="socials">
+
+        <a
+        href="https://www.facebook.com/vanhunglewx2582011"
+        target="_blank"
+        class="social">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+
+        </a>
+
+        <a
+        href="https://www.tiktok.com/@itzreal_lewx"
+        target="_blank"
+        class="social">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+
+        </a>
+
+        <a
+        href="https://discord.gg/Ac6rGSPSzn"
+        target="_blank"
+        class="social">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png">
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Thanh Tab -->
+<div class="tabs">
+
+    <button
+    id="clientBtn"
+    class="tab active"
+    onclick="showTab('client')">
+
+        📥 TẢI CLIENT
+
+    </button>
+
+    <button
+    id="serviceBtn"
+    class="tab"
+    onclick="showTab('service')">
+
+        💰 CÀY THUÊ
+
+    </button>
+
+</div>
+
+<!-- Nội dung -->
+<div class="content">
+    <!-- Tab Tải Client -->
+    <div id="clientPage">
+<!-- IOS -->
+<div class="category">IOS</div>
+
+<div class="item">
+
+<img src="https://i.ibb.co/k2TNwXM2/image-20251113ad21f5694d529e79bf61bff306fdd2f1.jpg" class="app-logo">
+
+<div class="name">DELTA VNG IOS V2.725</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://ipas.cc/8hm3z2"
+
+target="_blank">⬇️</a>
+
+</div>
+
+<div class="item">
+
+<img src="https://i.ibb.co/zTrxfw7j/image-20260326e0fe878aec5a52921e12b228e0bdfecd.jpg" class="app-logo">
+
+<div class="name">DELTA VNG FIX LAG IOS V2.725</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://ipas.cc/o7ndg4"
+
+target="_blank">⬇️</a>
+
+</div>
+
+<!-- ANDROID -->
+<div class="category">ANDROID</div>
+
+<div class="item">
+
+<img src="https://i.ibb.co/NnHbLSnZ/image-202511046063dea8750bb9bfa463a5f879ee8aa4.jpg" class="app-logo">
+
+<div class="name">DELTA VNG V2.724 APK</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://www.mediafire.com/file/3urby8jk1f70ixi/Delta_X_VNG_2.724_Lewx.apk/file"
+
+target="_blank">⬇️</a>
+
+</div>
+
+<div class="item">
+
+<img src="https://i.ibb.co/rfvLRzpv/images.png" class="app-logo">
+
+<div class="name">DELTA QUOC TE V96 APK</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://www.mediafire.com/file/phi7ilvid1f8hcr/Delta_X_V96_Lewx.apk/file"
+
+target="_blank">⬇️</a>
+
+</div>
+
+<div class="item">
+
+<img src="https://i.ibb.co/VY08ckgr/IMG-20260619-162947.jpg" class="app-logo">
+
+<div class="name">DeltaVNG-V2.724 Fix Lag Font Việt Sơn</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://www.mediafire.com/file/3le2xhfblu62ibf/DeltaVNG-V2.724_%2528_v%25E1%25BB%2587t_s%25C6%25A1n_%2529.apk/file"
+
+target="_blank">⬇️</a>
+
+</div>
+<div class="item">
+
+<img src="https://i.ibb.co/VY08ckgr/IMG-20260619-162947.jpg" class="app-logo">
+
+<div class="name">Siêu Fix Lag Delta Vng V2.724 Font Minecraft</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://www.mediafire.com/file/omdnr3qzmrxqh8y/DeltaVNG-V2.724.735-MINECRAP_64bit.apk/file"
+
+target="_blank">⬇️</a>
+
+</div>
+<div class="item">
+
+<img src="https://i.ibb.co/rfvLRzpv/images.png" class="app-logo">
+
+<div class="name">Arceus X Quoc Te V5.1.4.6</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://www.mediafire.com/file/gxu5opkgqeqsh37/Roblox.-.Arceus.X.v5.1.4.6-Lewx.apk/file"
+
+target="_blank">⬇️</a>
+
+</div>
+<div class="item">
+
+<img src="https://i.ibb.co/NnHbLSnZ/image-202511046063dea8750bb9bfa463a5f879ee8aa4.jpg" class="app-logo">
+
+<div class="name">Arceus X VNG V5.1.4.6</div>
+<div class="note">
+    📅 Cập nhật: 29/06/2026
+</div>
+<a class="download"
+
+href="https://www.mediafire.com/file/0a0095xo8e7bnvg/Roblox.-.VNG.Arceus.X.v5.1.4.2-Lewx.apk/file"
+
+target="_blank">⬇️</a>
+
+</div>
+</div>
+
+    <!-- Tab Cày Thuê -->
+    <div id="servicePage" style="display:none;">
+<div class="box">
+
+    <h2>CÁC DỊCH VỤ HIỆN TẠI SHOP CÓ</h2>
+
+    <div class="list">
+
+<div class="item">
+    <span class="service">cày thêm 1000 lv</span>
+    <span class="price">60K</span>
+</div>
+
+<div class="item">
+    <span class="service">cày thêm 500lv</span>
+    <span class="price">36K</span>
+</div>
+
+<div class="item">
+    <span class="service">gạt cần (tặng thêm mảnh gương)(yêu cầu acc đã có mũ admin)</span>
+    <span class="price">25K</span>
+</div>
+
+<div class="item">
+    <span class="service">up 1 gear v4 (yêu cầu acc đã gạt cần)</span>
+    <span class="price">40K</span>
+</div>
+
+<div class="item">
+    <span class="service">up 2 gear v4 (yêu cầu acc đã gạt cần)</span>
+    <span class="price">60K</span>
+</div>
+
+<div class="item">
+    <span class="service">up full 5 gear v4 (yêu cầu acc đã gạt cần)</span>
+    <span class="price">130K</span>
+</div>
+
+<div class="item">
+    <span class="service">up tộc v1-v3 (bao beli)</span>
+    <span class="price">36K</span>
+</div>
+
+<div class="item">
+    <span class="service">yoru mini (yêu cầu acc đủ 3 haki legend và đã qua sea 3)</span>
+    <span class="price">50K</span>
+</div>
+
+<div class="item">
+    <span class="service">soul guitar (bao nguyên liệu)</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">1 kiếm zoro ngẫu nhiên</span>
+    <span class="price">15K</span>
+</div>
+
+<div class="item">
+    <span class="service">1 kiếm zoro tự chọn</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">True Triple Katana (thiếu 3 kiếm) (yêu cầu acc có sẵn 8m beli)</span>
+    <span class="price">55K</span>
+</div>
+
+<div class="item">
+    <span class="service">song kiếm oden (yêu cầu đã có 2 kiếm tushita và yama)</span>
+    <span class="price">25K</span>
+</div>
+
+<div class="item">
+    <span class="service">kiếm tushita</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">kiếm yama</span>
+    <span class="price">15K</span>
+</div>
+
+<div class="item">
+    <span class="service">song kiếm oden (thiếu cả 2 kiếm)</span>
+    <span class="price">50K</span>
+</div>
+
+<div class="item">
+    <span class="service">fox lamp</span>
+    <span class="price">36K</span>
+</div>
+
+<div class="item">
+    <span class="service">mỏ neo (shark ancho)</span>
+    <span class="price">36K</span>
+</div>
+
+<div class="item">
+    <span class="service">pole v1</span>
+    <span class="price">10K</span>
+</div>
+
+<div class="item">
+    <span class="service">áo choàng râu đen</span>
+    <span class="price">120K</span>
+</div>
+
+<div class="item">
+    <span class="service">lấy tộc cyborg</span>
+    <span class="price">40K</span>
+</div>
+
+<div class="item">
+    <span class="service">lấy tộc quỷ</span>
+    <span class="price">30K</span>
+</div>
+
+<div class="item">
+    <span class="service">kitsune ribbon</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">mặt nạ kitsune</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">up vũ khí 1 sao</span>
+    <span class="price">15K</span>
+</div>
+
+<div class="item">
+    <span class="service">1 nguyên thạch bóng tối</span>
+    <span class="price">10K</span>
+</div>
+
+<div class="item">
+    <span class="service">cày thông thạo 1-300</span>
+    <span class="price">10K</span>
+</div>
+
+<div class="item">
+    <span class="service">cày thông thạo 300-600</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">cày thông thạo 1-600</span>
+    <span class="price">30K</span>
+</div>
+
+<div class="item">
+    <span class="service">thức tỉnh trái ác quỷ (yêu cầu có đủ f)</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">thức tỉnh trái ác quỷ (chưa đủ f)</span>
+    <span class="price">40K</span>
+</div>
+
+<div class="item">
+    <span class="service">thức tỉnh trái ác quỷ mochi</span>
+    <span class="price">50K</span>
+</div>
+
+<div class="item">
+    <span class="service">thức tỉnh trái ác quỷ phoenix</span>
+    <span class="price">50K</span>
+</div>
+
+<div class="item">
+    <span class="service">đánh rip_indra (yêu cầu acc đã qua sea 3)</span>
+    <span class="price">10K</span>
+</div>
+
+<div class="item">
+    <span class="service">5k fragments</span>
+    <span class="price">10K</span>
+</div>
+
+<div class="item">
+    <span class="service">10k fragments</span>
+    <span class="price">20K</span>
+</div>
+
+<div class="item">
+    <span class="service">20k fragments</span>
+    <span class="price">36K</span>
+</div>
+
+<div class="item">
+    <span class="service">100k fragments</span>
+    <span class="price">170K</span>
+</div>
+
+<div class="item">
+    <span class="service">1m beli</span>
+    <span class="price">1K</span>
+</div>
+
+<div class="item">
+    <span class="service">10m beli</span>
+    <span class="price">8K</span>
+</div>
+
+<div class="item">
+    <span class="service">20m beli</span>
+    <span class="price">16K</span>
+</div>
+
+<div class="item">
+    <span class="service">50m beli</span>
+    <span class="price">30K</span>
+</div>
+
+<div class="item">
+    <span class="service">100m beli</span>
+    <span class="price">55K</span>
+</div>
+
+<div class="item">
+    <span class="service">1b beli</span>
+    <span class="price">200K</span>
+</div>
+
+<div class="item">
+    <span class="service">haki rainbow</span>
+    <span class="price">10K</span>
+</div>
+
+<div class="item">
+    <span class="service">cày haki quan sát v2(yêu cầu acc có 5m beli)</span>
+    <span class="price">25K</span>
+</div>
+
+<div class="item">
+    <span class="service">đánh boss dough king v2 (lấy mảnh gương + chip raid mochi)(yêu cầu acc đã qua sea 3)</span>
+    <span class="price">15K</span>
+</div>
+
+<div class="item">
+    <span class="service">lưỡi hái bóng tối (yêu cầu đã qua sea 3)</span>
+    <span class="price">15K</span>
+</div>
+    </div>
+</div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    © 2026 LEWXZZZ - All Rights Reserved
+</footer>
+
+<script>
+
+function showTab(page){
+
+    const client =
+        document.getElementById("clientPage");
+
+    const service =
+        document.getElementById("servicePage");
+
+    const clientBtn =
+        document.getElementById("clientBtn");
+
+    const serviceBtn =
+        document.getElementById("serviceBtn");
+
+    if(page==="client"){
+
+        client.style.display="block";
+        service.style.display="none";
+
+        clientBtn.classList.add("active");
+        serviceBtn.classList.remove("active");
+
+    }
+
+    else{
+
+        client.style.display="none";
+        service.style.display="block";
+
+        serviceBtn.classList.add("active");
+        clientBtn.classList.remove("active");
+
+    }
+
+}
+
+showTab("client");
+const particles =
+    document.getElementById("particles");
+
+for(let i=0;i<120;i++){
+
+    const dot =
+        document.createElement("span");
+
+    dot.style.left =
+        Math.random()*100+"%";
+
+    dot.style.top =
+        -Math.random()*window.innerHeight+"px";
+
+    const size =
+        2+Math.random()*6;
+
+    dot.style.width =
+        size+"px";
+
+    dot.style.height =
+        size+"px";
+
+    dot.style.animationDuration =
+        (6+Math.random()*8)+"s";
+
+    dot.style.animationDelay =
+        Math.random()*10+"s";
+
+    dot.style.opacity =
+        .4+Math.random()*.6;
+
+    dot.style.setProperty(
+        "--drift",
+        (-100+Math.random()*200)+"px"
+    );
+
+    particles.appendChild(dot);
+
+}
+</script>
+
+</body>
+</html>
