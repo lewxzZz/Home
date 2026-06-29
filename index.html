@@ -71,11 +71,13 @@ h1{
 
 .subtitle{
     margin-top:8px;
-    font-size:13px;
+    font-size:15px;
     color:#bfbfbf;
-   white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis;
+    max-width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    line-height:1.5;
 }
 
 .notice{
@@ -146,10 +148,14 @@ color:white;
 }
 
 .category{
-    font-size:24px;
-    font-weight:bold;
-    margin:30px 0 15px;
+    font-size:26px;
+    font-weight:900;
+    text-align:center;
+    margin:35px 0 20px;
     color:#60a5fa;
+    text-shadow:
+        0 0 5px #60a5fa,
+        0 0 12px #60a5fa;
 }
 
 .item{
@@ -331,17 +337,21 @@ color:white;
 
     h1{
     margin-top:15px;
-    font-size:56px;
+    font-size:clamp(42px,10vw,56px);
     font-weight:900;
-    letter-spacing:3px;
+    letter-spacing:1px;
 
     animation:rgbSync 8s linear infinite;
+    color:currentColor;
+
+    text-align:center;
+    white-space:nowrap;
 
     text-shadow:
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 20px currentColor,
-    0 0 35px currentColor;
+        0 0 5px currentColor,
+        0 0 12px currentColor,
+        0 0 25px currentColor,
+        0 0 40px currentColor;
 }
 
     .subtitle{
@@ -560,7 +570,7 @@ onclick="closeNotice()">
 </span>
 
         📢 Thông báo:
-        Hiện tại tất cả dịch vụ đều hoạt động bình thường.
+        Hiện tại tất cả Client đều hoạt động bình thường.
 
     </div>
 
@@ -1097,14 +1107,4 @@ for(let i=0;i<120;i++){
 function closeNotice(){
 const n=document.getElementById("notice");
 n.style.transition="0.35s";
-n.style.opacity="0";
-n.style.transform="translateY(-15px)";
-
-setTimeout(()=>{
-    n.style.display="none";
-},350);
-}
-</script>
-
-</body>
-</html>
+n.styl
