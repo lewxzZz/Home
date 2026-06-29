@@ -55,7 +55,7 @@ a{
 
     border:4px solid #fff;
 
-    animation:borderRGB 5s linear infinite;
+    animation:rgbSync 8s linear infinite;
 
     box-shadow:
     0 0 10px currentColor,
@@ -156,7 +156,7 @@ color:white;
     display:flex;
     align-items:center;
     gap:15px;
-    background:#000;
+    background:#3a3a3a;   /* xám */
     padding:15px;
     border-radius:15px;
     margin-bottom:15px;
@@ -196,7 +196,7 @@ color:white;
 }
 
 .box{
-    background:#000;
+    background:#444;       /* xám đậm */
     padding:20px;
     border-radius:15px;
     border:2px solid #fff;
@@ -207,13 +207,15 @@ color:white;
     overflow-y:auto;
     margin-top:15px;
     padding-right:6px;
-    background:#000;
+    background:#555;       /* nền danh sách */
     border:2px solid #fff;
     border-radius:12px;
 }
 
 .list .item{
     justify-content:space-between;
+    background:#3a3a3a;    /* từng ô dịch vụ */
+    border:2px solid #fff;
 }
 
 .price{
@@ -319,7 +321,7 @@ color:white;
 
     border:4px solid white;
 
-    animation:borderRGB 5s linear infinite;
+    animation:rgbSync 8s linear infinite;
 
     box-shadow:
     0 0 15px #fff,
@@ -395,12 +397,11 @@ color:white;
     font-size:14px;
 }
 .service-scroll::-webkit-scrollbar{
-    width:10px;
+    width:8px;
 }
 
 .service-scroll::-webkit-scrollbar-track{
-    background:#000;
-    border:1px solid #fff;
+    background:#777;
     border-radius:10px;
 }
 
@@ -410,80 +411,84 @@ color:white;
 }
 
 .service-scroll::-webkit-scrollbar-thumb:hover{
-    background:#ddd;
+    background:#e5e5e5;
 }
-@keyframes rainbow{
-0%{
-color:#ff0000;
-}
-16%{
-color:#ff7b00;
-}
-32%{
-color:#ffff00;
-}
-48%{
-color:#00ff00;
-}
-64%{
-color:#00ffff;
-}
-80%{
-color:#0066ff;
-}
-90%{
-color:#ff00ff;
-}
-100%{
-color:#ff0000;
-}
-}
-
-@keyframes borderRGB{
+@keyframes rgbSync{
 
 0%{
+color:#ff0000;
 border-color:#ff0000;
 box-shadow:0 0 10px #ff0000,
 0 0 30px #ff0000,
 0 0 60px #ff0000;
 }
 
-15%{
-border-color:#ff8000;
-box-shadow:0 0 10px #ff8000,
-0 0 30px #ff8000,
-0 0 60px #ff8000;
+10%{
+color:#ff7b00;
+border-color:#ff7b00;
+box-shadow:0 0 10px #ff7b00,
+0 0 30px #ff7b00,
+0 0 60px #ff7b00;
 }
 
-30%{
+20%{
+color:#ffff00;
 border-color:#ffff00;
 box-shadow:0 0 10px #ffff00,
 0 0 30px #ffff00,
 0 0 60px #ffff00;
 }
 
-45%{
+30%{
+color:#7fff00;
+border-color:#7fff00;
+box-shadow:0 0 10px #7fff00,
+0 0 30px #7fff00,
+0 0 60px #7fff00;
+}
+
+40%{
+color:#00ff00;
 border-color:#00ff00;
 box-shadow:0 0 10px #00ff00,
 0 0 30px #00ff00,
 0 0 60px #00ff00;
 }
 
-60%{
-border-color:#00ffff;
-box-shadow:0 0 10px #00ffff,
-0 0 30px #00ffff,
-0 0 60px #00ffff;
+50%{
+color:#00ffd5;
+border-color:#00ffd5;
+box-shadow:0 0 10px #00ffd5,
+0 0 30px #00ffd5,
+0 0 60px #00ffd5;
 }
 
-75%{
-border-color:#0066ff;
-box-shadow:0 0 10px #0066ff,
-0 0 30px #0066ff,
-0 0 60px #0066ff;
+60%{
+color:#00aaff;
+border-color:#00aaff;
+box-shadow:0 0 10px #00aaff,
+0 0 30px #00aaff,
+0 0 60px #00aaff;
+}
+
+70%{
+color:#004cff;
+border-color:#004cff;
+box-shadow:0 0 10px #004cff,
+0 0 30px #004cff,
+0 0 60px #004cff;
+}
+
+80%{
+color:#8a2be2;
+border-color:#8a2be2;
+box-shadow:0 0 10px #8a2be2,
+0 0 30px #8a2be2,
+0 0 60px #8a2be2;
 }
 
 90%{
+color:#ff00ff;
 border-color:#ff00ff;
 box-shadow:0 0 10px #ff00ff,
 0 0 30px #ff00ff,
@@ -491,10 +496,13 @@ box-shadow:0 0 10px #ff00ff,
 }
 
 100%{
+color:#ff0000;
 border-color:#ff0000;
 box-shadow:0 0 10px #ff0000,
 0 0 30px #ff0000,
 0 0 60px #ff0000;
+}
+
 }
 
 .closeNotice{
